@@ -1,0 +1,3 @@
+C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Source\GoldenFlag\GoldenFlag.Build.cs
+C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Source\GoldenFlag.Target.cs
+C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Source\GoldenFlagEditor.Target.cs

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\GoldenFlag.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{4AA42B86-C2D4-4550-B700-C65B87466752}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GoldenFlag.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\GoldenFlagEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{C357A07F-BA92-4008-A188-C99BB4B40607}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\GoldenFlag">
+			<UniqueIdentifier>{709160DD-3E9D-4CA8-B9A2-3E27F2E725DB}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GoldenFlag\GoldenFlag.Build.cs">
+			<Filter>Source\GoldenFlag</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\GoldenFlag\GoldenFlag.cpp">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoldenFlag\GoldenFlag.h">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\GoldenFlag\GoldenFlagCharacter.cpp">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoldenFlag\GoldenFlagCharacter.h">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\GoldenFlag\GoldenFlagGameMode.cpp">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoldenFlag\GoldenFlagGameMode.h">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\GoldenFlag\GoldenFlagHUD.cpp">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoldenFlag\GoldenFlagHUD.h">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\GoldenFlag\GoldenFlagProjectile.cpp">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoldenFlag\GoldenFlagProjectile.h">
+			<Filter>Source\GoldenFlag</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
