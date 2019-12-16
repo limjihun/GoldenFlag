@@ -28,12 +28,13 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 	Mesh3P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh3P"));
 	Mesh3P->SetupAttachment(GetCapsuleComponent());
 	Mesh3P->RelativeRotation = FRotator(0.0f, 270.0f, 0.0f);
-	Mesh3P->RelativeLocation = FVector(0.0f, 0.0f, -162.0f);
+	Mesh3P->RelativeLocation = FVector(0.0f, 0.0f, -90.0f);
 
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(Mesh3P);
-	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
+	FirstPersonCameraComponent->RelativeLocation = FVector(0.0f, 15.0f, 150.0f); // Position the camera
+	FirstPersonCameraComponent->RelativeRotation = FRotator(0.0f, 90.0f, 0.0f);
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 }
 

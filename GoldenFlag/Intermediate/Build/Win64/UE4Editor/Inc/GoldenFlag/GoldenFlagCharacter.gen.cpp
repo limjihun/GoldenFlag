@@ -50,6 +50,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "Category", "Character" },
 				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+				{ "ToolTip", "Get angle between forward vector and velocity vector" },
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGoldenFlagCharacter, "GetDirectionInDegree", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, sizeof(GoldenFlagCharacter_eventGetDirectionInDegree_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
@@ -74,6 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "Category", "Character" },
 				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+				{ "ToolTip", "Get speed of character" },
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGoldenFlagCharacter, "GetSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, sizeof(GoldenFlagCharacter_eventGetSpeed_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
@@ -95,8 +97,8 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 				(UObject* (*)())Z_Construct_UPackage__Script_GoldenFlag,
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
-				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree, "GetDirectionInDegree" }, // 2180014705
-				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed, "GetSpeed" }, // 3474063564
+				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree, "GetDirectionInDegree" }, // 1223689188
+				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed, "GetSpeed" }, // 766196034
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -173,7 +175,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoldenFlagCharacter, 246626042);
+	IMPLEMENT_CLASS(AGoldenFlagCharacter, 2393194732);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGoldenFlagCharacter(Z_Construct_UClass_AGoldenFlagCharacter, &AGoldenFlagCharacter::StaticClass, TEXT("/Script/GoldenFlag"), TEXT("AGoldenFlagCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGoldenFlagCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

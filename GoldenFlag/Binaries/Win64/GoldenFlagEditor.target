@@ -16,15 +16,15 @@
 	},
 	"BuildProducts": [
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-GoldenFlag-1619.dll",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-GoldenFlag-793.dll",
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-GoldenFlag-1619.pdb",
+			"Path": "$(ProjectDir)/Binaries/Win64/UE4Editor-GoldenFlag-793.pdb",
 			"Type": "SymbolFile"
 		},
 		{
-			"Path": "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GoldenFlag-1619.lib",
+			"Path": "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GoldenFlag-793.lib",
 			"Type": "ImportLibrary"
 		},
 		{
