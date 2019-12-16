@@ -13,8 +13,44 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GOLDENFLAG_GoldenFlagCharacter_generated_h
 
-#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS
-#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetDirectionInDegree) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetDirectionInDegree(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetSpeed) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetSpeed(); \
+		P_NATIVE_END; \
+	}
+
+
+#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetDirectionInDegree) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetDirectionInDegree(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetSpeed) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetSpeed(); \
+		P_NATIVE_END; \
+	}
+
+
 #define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGoldenFlagCharacter(); \
@@ -60,14 +96,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGoldenFlagCharacter); \
 
 
 #define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AGoldenFlagCharacter, Mesh1P); } \
-	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(AGoldenFlagCharacter, FP_Gun); } \
-	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(AGoldenFlagCharacter, FP_MuzzleLocation); } \
-	FORCEINLINE static uint32 __PPO__VR_Gun() { return STRUCT_OFFSET(AGoldenFlagCharacter, VR_Gun); } \
-	FORCEINLINE static uint32 __PPO__VR_MuzzleLocation() { return STRUCT_OFFSET(AGoldenFlagCharacter, VR_MuzzleLocation); } \
-	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AGoldenFlagCharacter, FirstPersonCameraComponent); } \
-	FORCEINLINE static uint32 __PPO__R_MotionController() { return STRUCT_OFFSET(AGoldenFlagCharacter, R_MotionController); } \
-	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(AGoldenFlagCharacter, L_MotionController); }
+	FORCEINLINE static uint32 __PPO__Mesh3P() { return STRUCT_OFFSET(AGoldenFlagCharacter, Mesh3P); } \
+	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AGoldenFlagCharacter, FirstPersonCameraComponent); }
 
 
 #define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_11_PROLOG

@@ -1,4 +1,4 @@
-﻿Log file open, 12/15/19 22:03:48
+﻿Log file open, 12/16/19 21:42:51
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -7,12 +7,12 @@ LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
 LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: GoldenFlag
 LogPlatformFile: Not using cached read wrapper
-LogInit: Display: RandInit(1288356496) SRandInit(1288356496).
+LogInit: Display: RandInit(-1960713937) SRandInit(-1960713936).
 LogInit: Read version file with build ID '3944462'
 LogInit: Overriding engine version to CL 4033788, compatible CL 3944462
 LogInit: Registered custom module enumerator with build ID '3944462'
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.307635
+LogStats: Stats thread started at 0.304898
 LogD3D11RHI: Aftermath initialized
 LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: +9:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -84,7 +84,7 @@ LogPluginManager: Mounting plugin ProceduralMeshComponent
 LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogStreaming: Display: Took  0.170s to configure plugins.
+LogStreaming: Display: Took  0.219s to configure plugins.
 LogModuleManager: Display: Found up-to-date module file ../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Binaries/Win64/UE4Editor-GoldenFlag.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3944462).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3944462).
@@ -220,176 +220,226 @@ LogInit: Branch Name: ++UE4+Release-4.19
 LogInit: Command Line: 
 LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.19/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
-LogStreaming: Display: Took  0.000s to delete old logs.
+LogStreaming: Display: Took  0.012s to delete old logs.
 LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
-[2019.12.15-13.03.53:534][  0]LogInit: Selected Device Profile: [Windows]
-[2019.12.15-13.03.53:534][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.12.15-13.03.53:553][  0]LogInit: Computer: JIHUN
-[2019.12.15-13.03.53:553][  0]LogInit: User: lim794
-[2019.12.15-13.03.53:553][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.12.15-13.03.53:553][  0]LogInit: High frequency timer resolution =10.000000 MHz
-[2019.12.15-13.03.53:554][  0]LogMemory: Memory total: Physical=7.9GB (8GB approx)
-[2019.12.15-13.03.53:554][  0]LogMemory: Platform Memory Stats for Windows
-[2019.12.15-13.03.53:554][  0]LogMemory: Process Physical Memory: 275.18 MB used, 275.18 MB peak
-[2019.12.15-13.03.53:554][  0]LogMemory: Process Virtual Memory: 264.59 MB used, 264.59 MB peak
-[2019.12.15-13.03.53:554][  0]LogMemory: Physical Memory: 4385.83 MB used,  3721.67 MB free, 8107.50 MB total
-[2019.12.15-13.03.53:554][  0]LogMemory: Virtual Memory: 4778.86 MB used,  3721.67 MB free, 134217728.00 MB total
-[2019.12.15-13.03.53:623][  0]LogInit: Using OS detected language (ko-KR).
-[2019.12.15-13.03.53:623][  0]LogInit: Using OS detected locale (ko-KR).
-[2019.12.15-13.03.53:698][  0]LogTextLocalizationManager: No specific localization for 'ko-KR' exists, so the 'ko' localization will be used.
-[2019.12.15-13.03.54:380][  0]LogStreaming: Display: Took  0.758s to EndInitTextLocalization.
-[2019.12.15-13.03.54:380][  0]LogInit: Setting process to per monitor DPI aware
-[2019.12.15-13.03.54:576][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.12.15-13.03.54:576][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.12.15-13.03.58:419][  0]LogD3D11RHI: D3D11 adapters:
-[2019.12.15-13.03.58:528][  0]LogD3D11RHI:    0. 'NVIDIA GeForce MX150' (Feature Level 11_0)
-[2019.12.15-13.03.58:528][  0]LogD3D11RHI:       1983/0/4053 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
-[2019.12.15-13.03.58:551][  0]LogD3D11RHI:    1. 'Intel(R) UHD Graphics 620' (Feature Level 11_0)
-[2019.12.15-13.03.58:551][  0]LogD3D11RHI:       128/0/4053 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
-[2019.12.15-13.03.58:567][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.12.15-13.03.58:568][  0]LogD3D11RHI:       0/0/4053 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.12.15-13.03.58:568][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.12.15-13.03.58:602][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.12.15-13.03.58:602][  0]LogD3D11RHI:     GPU DeviceId: 0x1d10 (for the marketing name, search the web for "GPU Device Id")
-[2019.12.15-13.03.58:602][  0]LogWindows: EnumDisplayDevices:
-[2019.12.15-13.03.58:603][  0]LogWindows:    0. 'Intel(R) UHD Graphics 620' (P:1 D:1)
-[2019.12.15-13.03.58:604][  0]LogWindows:    1. 'Intel(R) UHD Graphics 620' (P:0 D:0)
-[2019.12.15-13.03.58:605][  0]LogWindows:    2. 'Intel(R) UHD Graphics 620' (P:0 D:0)
-[2019.12.15-13.03.58:606][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
-[2019.12.15-13.03.58:606][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce MX150
-[2019.12.15-13.03.58:606][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
-[2019.12.15-13.03.58:606][  0]LogD3D11RHI:      Driver Date: Unknown
-[2019.12.15-13.03.58:606][  0]LogRHI: Texture pool is 1388 MB (70% of 1983 MB)
-[2019.12.15-13.03.58:671][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
-[2019.12.15-13.03.58:671][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
-[2019.12.15-13.03.58:671][  0]LogD3D11RHI: Async texture creation enabled
-[2019.12.15-13.03.58:691][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
-[2019.12.15-13.03.58:694][  0]LogShaderCompilers: Guid format shader working directory is -22 characters bigger than the processId version (../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Intermediate/Shaders/WorkingDirectory/6940/).
-[2019.12.15-13.03.58:694][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/lim79/AppData/Local/Temp/UnrealShaderWorkingDir/66558AD74FAF2802BC0C15BE236C7927/'.
-[2019.12.15-13.03.59:098][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
-[2019.12.15-13.03.59:125][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
-[2019.12.15-13.03.59:145][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
-[2019.12.15-13.03.59:165][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
-[2019.12.15-13.03.59:193][  0]LogTemp: Display: Loaded TP MacTargetPlatform
-[2019.12.15-13.03.59:215][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
-[2019.12.15-13.03.59:236][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
-[2019.12.15-13.03.59:256][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
-[2019.12.15-13.03.59:266][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
-[2019.12.15-13.03.59:283][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
-[2019.12.15-13.03.59:302][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
-[2019.12.15-13.03.59:323][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
-[2019.12.15-13.03.59:343][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
-[2019.12.15-13.03.59:365][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
-[2019.12.15-13.03.59:388][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
-[2019.12.15-13.03.59:425][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
-[2019.12.15-13.03.59:425][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
-[2019.12.15-13.03.59:449][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.12.15-13.03.59:453][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
-[2019.12.15-13.03.59:507][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2019.12.15-13.03.59:525][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2019.12.15-13.03.59:545][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
-[2019.12.15-13.03.59:564][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
-[2019.12.15-13.03.59:581][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
-[2019.12.15-13.03.59:604][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
-[2019.12.15-13.03.59:604][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.12.15-13.03.59:912][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.12.15-13.03.59:912][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.12.15-13.03.59:912][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.12.15-13.04.02:532][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.12.15-13.04.02:608][  0]LogDerivedDataCache: Loaded boot cache 0.08s 76MB C:/Users/lim79/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
-[2019.12.15-13.04.02:608][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/lim79/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
-[2019.12.15-13.04.02:608][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.12.15-13.04.02:608][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.12.15-13.04.02:608][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.12.15-13.04.02:608][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.12.15-13.04.02:627][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.12.15-13.04.02:639][  0]LogDerivedDataCache: Using Local data cache path C:/Users/lim79/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.12.15-13.04.02:639][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.12.15-13.04.02:639][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.12.15-13.04.02:651][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.12.15-13.04.02:651][  0]LogSlate: Using Freetype 2.6.0
-[2019.12.15-13.04.02:662][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.12.15-13.04.02:662][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.12.15-13.04.03:267][  0]LogAssetRegistry: FAssetRegistry took 0.0274 seconds to start up
-[2019.12.15-13.04.03:700][  0]LogInit: Selected Device Profile: [Windows]
-[2019.12.15-13.04.03:952][  0]LogSimplygon: Simplygon DLL not present - disabling.
-[2019.12.15-13.04.03:959][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
-[2019.12.15-13.04.03:959][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.12.15-13.04.03:959][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
-[2019.12.15-13.04.03:959][  0]LogMeshReduction: No automatic mesh merging module available
-[2019.12.15-13.04.03:959][  0]LogMeshMerging: No automatic mesh merging module available
-[2019.12.15-13.04.04:073][  0]LogNetVersion: GoldenFlag , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 548217690)
-[2019.12.15-13.04.04:929][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.176129 seconds
-[2019.12.15-13.04.04:938][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
-[2019.12.15-13.04.04:938][  0]LogUObjectAllocator: 7314304 out of 0 bytes used by permanent object pool.
-[2019.12.15-13.04.04:938][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.12.15-13.04.08:199][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.12.15-13.04.08:269][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.12.15-13.04.09:262][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002207f830b80, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
-[2019.12.15-13.04.09:282][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002207f830b80, Size=72
-[2019.12.15-13.04.09:282][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002207f5b6840, Size=72, Default__FirstPerson_AnimBP_C Function /Engine/Transient.REINST_FirstPerson_AnimBP_C_0:ExecuteUbergraph_FirstPerson_AnimBP
-[2019.12.15-13.04.09:300][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000220083b53a0, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
-[2019.12.15-13.04.09:478][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [1.773600ms] /Game/FirstPerson/Character/Mesh/SK_Mannequin_Arms.SK_Mannequin_Arms
-[2019.12.15-13.04.09:507][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.742000ms] /Game/FirstPerson/FPWeapon/Mesh/SK_FPGun.SK_FPGun
-[2019.12.15-13.04.09:837][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
-[2019.12.15-13.04.09:837][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
-[2019.12.15-13.04.09:877][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
-[2019.12.15-13.04.09:917][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
-[2019.12.15-13.04.11:068][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.12.15-13.04.11:709][  0]LogOcInput: OculusInput pre-init called
-[2019.12.15-13.04.11:963][  0]LogEngine: Initializing Engine...
-[2019.12.15-13.04.11:966][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.12.15-13.04.11:969][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2019.12.15-13.04.11:969][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2019.12.15-13.04.12:418][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.12.15-13.04.12:642][  0]LogInit: XAudio2 using '스피커(Realtek High Definition Audio(SST))' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2019.12.15-13.04.12:781][  0]LogInit: FAudioDevice initialized.
-[2019.12.15-13.04.12:868][  0]LogDerivedDataCache: Saved boot cache 0.09s 76MB C:/Users/lim79/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
-[2019.12.15-13.04.12:894][  0]LogInit: Texture streaming: Enabled
-[2019.12.15-13.04.12:961][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.12.15-13.04.13:027][  0]LogInit: Transaction tracking system initialized
-[2019.12.15-13.04.13:138][  0]BlueprintLog: New page: 에디터 로드
-[2019.12.15-13.04.13:606][  0]LocalizationService: 현지화 서비스가 비활성화되었습니다.
-[2019.12.15-13.04.13:872][  0]LogConsoleResponse: Display: 
-[2019.12.15-13.04.14:126][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.12.15-13.04.14:127][  0]LogCook: Display: Mobile HDR setting 1
-[2019.12.15-13.04.14:127][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
-[2019.12.15-13.04.14:127][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2019.12.15-13.04.14:127][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2019.12.15-13.04.14:451][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/' took 0.02s
-[2019.12.15-13.04.15:270][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
-[2019.12.15-13.04.15:270][  0]Cmd: MAP LOAD FILE="../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.12.15-13.04.15:272][  0]LightingResults: New page: 라이팅 빌드
-[2019.12.15-13.04.15:279][  0]MapCheck: New page: 맵 체크
-[2019.12.15-13.04.15:279][  0]LightingResults: New page: 라이팅 빌드
-[2019.12.15-13.04.15:292][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002207f5b6840, Size=72
-[2019.12.15-13.04.15:566][  0]LogAIModule: Creating AISystem for world FirstPersonExampleMap
-[2019.12.15-13.04.15:629][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.12.15-13.04.15:646][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.12.15-13.04.15:817][  0]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 171.353ms.
-[2019.12.15-13.04.15:817][  0]LogFileHelpers: Loading map 'FirstPersonExampleMap' took 0.547
-[2019.12.15-13.04.16:066][  0]LogCollectionManager: Loaded 0 collections in 0.003076 seconds
-[2019.12.15-13.04.16:119][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Saved/Collections/' took 0.01s
-[2019.12.15-13.04.16:119][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/Developers/lim794/Collections/' took 0.01s
-[2019.12.15-13.04.16:119][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/Collections/' took 0.01s
-[2019.12.15-13.04.16:119][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
-[2019.12.15-13.04.16:129][  0]LogContentBrowser: Native class hierarchy populated in 0.0098 seconds. Added 2456 classes and 560 folders.
-[2019.12.15-13.04.16:142][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0009 seconds. Added 0 classes and 0 folders.
-[2019.12.15-13.04.16:219][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0010 seconds. Added 0 classes and 0 folders.
-[2019.12.15-13.04.16:239][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0012 seconds. Added 1 classes and 2 folders.
-[2019.12.15-13.04.16:464][  0]LogSlate: Took 0.009631 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.12.15-13.04.16:487][  0]LogSlate: Took 0.020971 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothic.ttf' (4243K)
-[2019.12.15-13.04.16:512][  0]LogSlate: Took 0.019267 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothicBold.ttf' (4188K)
-[2019.12.15-13.04.16:520][  0]LogSlate: Took 0.007692 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.12.15-13.04.16:531][  0]LogSlate: Took 0.007767 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.12.15-13.04.16:655][  0]LogRenderer: Reallocating scene render targets to support 1100x536 Format 9 NumSamples 1 (Frame:1).
-[2019.12.15-13.04.17:046][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0010 seconds. Added 0 classes and 0 folders.
-[2019.12.15-13.04.17:046][  0]LogLoad: (Engine Initialization) Total time: 29.68 seconds
-[2019.12.15-13.04.17:046][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.12.15-13.04.17:100][  0]LogContentStreaming: Texture pool size now 800 MB
-[2019.12.15-13.04.17:136][  0]LogSlate: Took 0.000412 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.12.15-13.04.17:155][  1]LogAssetRegistry: Asset discovery search completed in 13.9107 seconds
-[2019.12.15-13.04.17:157][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
-[2019.12.15-13.04.17:157][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000083 seconds (updated 0 objects)
-[2019.12.15-13.15.35:606][229]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.12.16-12.42.55:432][  0]LogInit: Selected Device Profile: [Windows]
+[2019.12.16-12.42.55:432][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.12.16-12.42.55:463][  0]LogInit: Computer: JIHUN
+[2019.12.16-12.42.55:463][  0]LogInit: User: lim794
+[2019.12.16-12.42.55:463][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.12.16-12.42.55:463][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2019.12.16-12.42.55:463][  0]LogMemory: Memory total: Physical=7.9GB (8GB approx)
+[2019.12.16-12.42.55:463][  0]LogMemory: Platform Memory Stats for Windows
+[2019.12.16-12.42.55:463][  0]LogMemory: Process Physical Memory: 276.79 MB used, 276.79 MB peak
+[2019.12.16-12.42.55:463][  0]LogMemory: Process Virtual Memory: 264.64 MB used, 264.64 MB peak
+[2019.12.16-12.42.55:463][  0]LogMemory: Physical Memory: 5910.59 MB used,  2196.91 MB free, 8107.50 MB total
+[2019.12.16-12.42.55:463][  0]LogMemory: Virtual Memory: 4778.86 MB used,  2196.91 MB free, 134217728.00 MB total
+[2019.12.16-12.42.55:512][  0]LogInit: Using OS detected language (ko-KR).
+[2019.12.16-12.42.55:512][  0]LogInit: Using OS detected locale (ko-KR).
+[2019.12.16-12.42.55:521][  0]LogTextLocalizationManager: No specific localization for 'ko-KR' exists, so the 'ko' localization will be used.
+[2019.12.16-12.42.55:973][  0]LogStreaming: Display: Took  0.462s to EndInitTextLocalization.
+[2019.12.16-12.42.55:974][  0]LogInit: Setting process to per monitor DPI aware
+[2019.12.16-12.42.56:068][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.12.16-12.42.56:068][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.12.16-12.42.56:506][  0]LogD3D11RHI: D3D11 adapters:
+[2019.12.16-12.42.56:607][  0]LogD3D11RHI:    0. 'NVIDIA GeForce MX150' (Feature Level 11_0)
+[2019.12.16-12.42.56:607][  0]LogD3D11RHI:       1983/0/4053 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2019.12.16-12.42.56:631][  0]LogD3D11RHI:    1. 'Intel(R) UHD Graphics 620' (Feature Level 11_0)
+[2019.12.16-12.42.56:631][  0]LogD3D11RHI:       128/0/4053 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2019.12.16-12.42.56:633][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.12.16-12.42.56:633][  0]LogD3D11RHI:       0/0/4053 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.12.16-12.42.56:633][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.12.16-12.42.56:664][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.12.16-12.42.56:664][  0]LogD3D11RHI:     GPU DeviceId: 0x1d10 (for the marketing name, search the web for "GPU Device Id")
+[2019.12.16-12.42.56:664][  0]LogWindows: EnumDisplayDevices:
+[2019.12.16-12.42.56:664][  0]LogWindows:    0. 'Intel(R) UHD Graphics 620' (P:1 D:1)
+[2019.12.16-12.42.56:665][  0]LogWindows:    1. 'Intel(R) UHD Graphics 620' (P:0 D:0)
+[2019.12.16-12.42.56:666][  0]LogWindows:    2. 'Intel(R) UHD Graphics 620' (P:0 D:0)
+[2019.12.16-12.42.56:666][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2019.12.16-12.42.56:666][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce MX150
+[2019.12.16-12.42.56:666][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2019.12.16-12.42.56:666][  0]LogD3D11RHI:      Driver Date: Unknown
+[2019.12.16-12.42.56:667][  0]LogRHI: Texture pool is 1388 MB (70% of 1983 MB)
+[2019.12.16-12.42.56:719][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2019.12.16-12.42.56:719][  0]LogD3D11RHI: [Aftermath] Aftermath enabled and primed
+[2019.12.16-12.42.56:719][  0]LogD3D11RHI: Async texture creation enabled
+[2019.12.16-12.42.56:742][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2019.12.16-12.42.56:744][  0]LogShaderCompilers: Guid format shader working directory is -23 characters bigger than the processId version (../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Intermediate/Shaders/WorkingDirectory/15972/).
+[2019.12.16-12.42.56:744][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/lim79/AppData/Local/Temp/UnrealShaderWorkingDir/94A58B7F41CC2DDE01526FBEF6829E61/'.
+[2019.12.16-12.42.57:111][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2019.12.16-12.42.57:131][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2019.12.16-12.42.57:153][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2019.12.16-12.42.57:170][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2019.12.16-12.42.57:191][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2019.12.16-12.42.57:213][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2019.12.16-12.42.57:232][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2019.12.16-12.42.57:250][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2019.12.16-12.42.57:261][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2019.12.16-12.42.57:277][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2019.12.16-12.42.57:292][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2019.12.16-12.42.57:307][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2019.12.16-12.42.57:324][  0]LogTemp: Display: Loaded TP Android_ETC1aTargetPlatform
+[2019.12.16-12.42.57:343][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2019.12.16-12.42.57:359][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2019.12.16-12.42.57:392][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2019.12.16-12.42.57:392][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2019.12.16-12.42.57:408][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.12.16-12.42.57:410][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2019.12.16-12.42.57:455][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.12.16-12.42.57:470][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.12.16-12.42.57:484][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2019.12.16-12.42.57:500][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2019.12.16-12.42.57:514][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2019.12.16-12.42.57:530][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2019.12.16-12.42.57:530][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.12.16-12.42.57:742][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.12.16-12.42.57:742][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.12.16-12.42.57:742][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.12.16-12.42.58:803][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.12.16-12.42.58:882][  0]LogDerivedDataCache: Loaded boot cache 0.08s 79MB C:/Users/lim79/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2019.12.16-12.42.58:882][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/lim79/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc
+[2019.12.16-12.42.58:882][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.12.16-12.42.58:882][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.12.16-12.42.58:882][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.12.16-12.42.58:882][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.12.16-12.42.58:900][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.12.16-12.42.58:914][  0]LogDerivedDataCache: Using Local data cache path C:/Users/lim79/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.12.16-12.42.58:914][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.12.16-12.42.58:914][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.12.16-12.42.58:927][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.12.16-12.42.58:927][  0]LogSlate: Using Freetype 2.6.0
+[2019.12.16-12.42.58:928][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.12.16-12.42.58:928][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.12.16-12.42.59:145][  0]LogAssetRegistry: FAssetRegistry took 0.0288 seconds to start up
+[2019.12.16-12.42.59:569][  0]LogInit: Selected Device Profile: [Windows]
+[2019.12.16-12.42.59:782][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2019.12.16-12.42.59:788][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2019.12.16-12.42.59:788][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.12.16-12.42.59:788][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2019.12.16-12.42.59:788][  0]LogMeshReduction: No automatic mesh merging module available
+[2019.12.16-12.42.59:788][  0]LogMeshMerging: No automatic mesh merging module available
+[2019.12.16-12.42.59:846][  0]LogNetVersion: GoldenFlag , NetCL: 3944462, EngineNetVer: 2, GameNetVer: 0 (Checksum: 548217690)
+[2019.12.16-12.43.00:581][  0]LogPackageLocalizationCache: Processed 9 localized package path(s) for 2 prioritized culture(s) in 0.167674 seconds
+[2019.12.16-12.43.00:588][  0]LogUObjectArray: 36728 objects as part of root set at end of initial load.
+[2019.12.16-12.43.00:588][  0]LogUObjectAllocator: 7314312 out of 0 bytes used by permanent object pool.
+[2019.12.16-12.43.00:588][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.12.16-12.43.03:327][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.12.16-12.43.03:374][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.12.16-12.43.03:874][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002178fab4ef0, Size=72, Default__SWAT_AnimBP_C Function /Game/Character/SWAT_AnimBP.SWAT_AnimBP_C:ExecuteUbergraph_SWAT_AnimBP
+[2019.12.16-12.43.03:880][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002178fab4ef0, Size=72
+[2019.12.16-12.43.03:880][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002178f9fe390, Size=72, Default__SWAT_AnimBP_C Function /Engine/Transient.REINST_SWAT_AnimBP_C_0:ExecuteUbergraph_SWAT_AnimBP
+[2019.12.16-12.43.03:889][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002178f7711c0, Size=72, Default__SWAT_AnimBP_C Function /Game/Character/SWAT_AnimBP.SWAT_AnimBP_C:ExecuteUbergraph_SWAT_AnimBP
+[2019.12.16-12.43.03:944][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000217903a2020, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
+[2019.12.16-12.43.03:954][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x00000217903a2020, Size=72
+[2019.12.16-12.43.03:954][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x000002179030fa10, Size=72, Default__FirstPerson_AnimBP_C Function /Engine/Transient.REINST_FirstPerson_AnimBP_C_1:ExecuteUbergraph_FirstPerson_AnimBP
+[2019.12.16-12.43.03:961][  0]LogUObjectGlobals: Created PersistentFrame Addr=0x00000217902a9f80, Size=72, Default__FirstPerson_AnimBP_C Function /Game/FirstPerson/Animations/FirstPerson_AnimBP.FirstPerson_AnimBP_C:ExecuteUbergraph_FirstPerson_AnimBP
+[2019.12.16-12.43.04:422][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [0.560200ms] /Game/FirstPerson/FPWeapon/Mesh/SK_FPGun.SK_FPGun
+[2019.12.16-12.43.04:434][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [1.325600ms] /Game/FirstPerson/Character/Mesh/SK_Mannequin_Arms.SK_Mannequin_Arms
+[2019.12.16-12.43.04:453][  0]LogSkeletalMesh: Skeletal Mesh found in DDC [2.752100ms] /Game/Character/Swat.Swat
+[2019.12.16-12.43.04:738][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2019.12.16-12.43.04:738][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2019.12.16-12.43.04:773][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2019.12.16-12.43.04:808][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2019.12.16-12.43.05:704][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.12.16-12.43.06:225][  0]LogOcInput: OculusInput pre-init called
+[2019.12.16-12.43.06:395][  0]LogEngine: Initializing Engine...
+[2019.12.16-12.43.06:398][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.12.16-12.43.06:402][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.12.16-12.43.06:402][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.12.16-12.43.06:676][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.12.16-12.43.06:809][  0]LogInit: XAudio2 using '헤드폰(QCY-T5_R Stereo)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2019.12.16-12.43.06:857][  0]LogInit: FAudioDevice initialized.
+[2019.12.16-12.43.06:933][  0]LogDerivedDataCache: Saved boot cache 0.08s 79MB C:/Users/lim79/AppData/Local/UnrealEngine/4.19/DerivedDataCache/Boot.ddc.
+[2019.12.16-12.43.06:947][  0]LogInit: Texture streaming: Enabled
+[2019.12.16-12.43.06:980][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.12.16-12.43.07:004][  0]LogInit: Transaction tracking system initialized
+[2019.12.16-12.43.07:048][  0]BlueprintLog: New page: 에디터 로드
+[2019.12.16-12.43.07:240][  0]LocalizationService: 현지화 서비스가 비활성화되었습니다.
+[2019.12.16-12.43.07:436][  0]LogConsoleResponse: Display: 
+[2019.12.16-12.43.07:679][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.12.16-12.43.07:679][  0]LogCook: Display: Mobile HDR setting 1
+[2019.12.16-12.43.07:679][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2019.12.16-12.43.07:679][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.12.16-12.43.07:679][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.12.16-12.43.08:310][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/' took 0.02s
+[2019.12.16-12.43.08:406][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2019.12.16-12.43.08:406][  0]Cmd: MAP LOAD FILE="../../../../../../Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.12.16-12.43.08:407][  0]LightingResults: New page: 라이팅 빌드
+[2019.12.16-12.43.08:412][  0]MapCheck: New page: 맵 체크
+[2019.12.16-12.43.08:413][  0]LightingResults: New page: 라이팅 빌드
+[2019.12.16-12.43.08:421][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002178f9fe390, Size=72
+[2019.12.16-12.43.08:421][  0]LogUObjectGlobals: Destroyed PersistentFrame Addr=0x000002179030fa10, Size=72
+[2019.12.16-12.43.08:703][  0]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2019.12.16-12.43.08:719][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.12.16-12.43.08:735][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.12.16-12.43.08:908][  0]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 172.995ms.
+[2019.12.16-12.43.08:909][  0]LogFileHelpers: Loading map 'FirstPersonExampleMap' took 0.502
+[2019.12.16-12.43.09:155][  0]LogCollectionManager: Loaded 0 collections in 0.003537 seconds
+[2019.12.16-12.43.09:206][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Saved/Collections/' took 0.01s
+[2019.12.16-12.43.09:206][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/Developers/lim794/Collections/' took 0.01s
+[2019.12.16-12.43.09:206][  0]LogFileCache: Scanning file cache for directory 'C:/Users/lim79/Desktop/CODE/UE4/GoldenFlag/GoldenFlag/Content/Collections/' took 0.01s
+[2019.12.16-12.43.09:206][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2019.12.16-12.43.09:216][  0]LogContentBrowser: Native class hierarchy populated in 0.0107 seconds. Added 2456 classes and 560 folders.
+[2019.12.16-12.43.09:231][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0009 seconds. Added 0 classes and 0 folders.
+[2019.12.16-12.43.09:818][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0013 seconds. Added 0 classes and 0 folders.
+[2019.12.16-12.43.09:830][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0013 seconds. Added 1 classes and 2 folders.
+[2019.12.16-12.43.09:962][  0]LogSlate: Took 0.000509 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.12.16-12.43.09:968][  0]LogSlate: Took 0.004566 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothic.ttf' (4243K)
+[2019.12.16-12.43.09:978][  0]LogSlate: Took 0.004762 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/NanumGothicBold.ttf' (4188K)
+[2019.12.16-12.43.09:979][  0]LogSlate: Took 0.000537 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.12.16-12.43.09:994][  0]LogSlate: Took 0.010960 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.12.16-12.43.10:115][  0]LogRenderer: Reallocating scene render targets to support 1100x536 Format 9 NumSamples 1 (Frame:1).
+[2019.12.16-12.43.10:445][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0010 seconds. Added 0 classes and 0 folders.
+[2019.12.16-12.43.10:445][  0]LogLoad: (Engine Initialization) Total time: 20.43 seconds
+[2019.12.16-12.43.10:445][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.12.16-12.43.10:480][  0]LogContentStreaming: Texture pool size now 800 MB
+[2019.12.16-12.43.10:533][  0]LogSlate: Took 0.007307 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.12.16-12.43.10:554][  1]LogAssetRegistry: Asset discovery search completed in 11.4322 seconds
+[2019.12.16-12.43.10:556][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2019.12.16-12.43.10:556][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000079 seconds (updated 0 objects)
+[2019.12.16-12.43.11:535][ 52]LogSlate: Took 0.000542 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.12.16-12.43.14:616][285]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.12.16-12.43.16:029][341]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0015 seconds. Added 116 classes and 0 folders.
+[2019.12.16-12.43.16:434][341]LogUObjectGlobals: Created PersistentFrame Addr=0x00000217fb964e40, Size=4, Default__SKEL_PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.SKEL_PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
+[2019.12.16-12.43.16:435][341]LogUObjectGlobals: Created PersistentFrame Addr=0x00000217fb964e08, Size=4, Default__PROTO_BP_AnimBlueprint_0_C Function /Engine/Transient.PROTO_BP_AnimBlueprint_0_C:ExecuteUbergraph_PROTO_BP_AnimBlueprint_0
+[2019.12.16-12.43.19:677][491]LogSlate: Took 0.020236 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2019.12.16-12.43.23:650][922]LogSlate: Took 0.008509 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2019.12.16-12.43.28:059][357]LogRenderer: Reallocating scene render targets to support 1100x572 Format 9 NumSamples 1 (Frame:1).
+[2019.12.16-12.43.35:865][115]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.12.16-12.47.24:307][347]LogHotReload: New module detected: UE4Editor-GoldenFlag-1619.dll
+[2019.12.16-12.47.25:659][352]LogHotReload: Starting Hot-Reload from IDE
+[2019.12.16-12.47.26:141][352]LogClass: Could not find existing class GoldenFlagCharacter in package /Script/GoldenFlag for HotReload, assuming new class
+[2019.12.16-12.47.26:142][352]LogClass: Function GetDirectionInDegree is new.
+[2019.12.16-12.47.26:142][352]LogClass: Function GetSpeed is new.
+[2019.12.16-12.47.26:151][352]LogHotReload: Re-instancing GoldenFlagCharacter after hot-reload.
+[2019.12.16-12.47.26:501][352]LogContentBrowser: Native class hierarchy updated for 'GoldenFlag' in 0.0011 seconds. Added 4 classes and 2 folders.
+[2019.12.16-12.47.26:503][352]Display: HotReload successful (1 functions remapped  0 scriptstructs remapped)
+[2019.12.16-12.47.26:922][352]LogContentBrowser: Native class hierarchy populated in 0.0124 seconds. Added 2457 classes and 562 folders.
+[2019.12.16-12.47.26:936][352]Display: HotReload took  1.3s.
+[2019.12.16-12.49.02:960][807]LogTemp: Repeating last play command: 선택된 뷰포트
+[2019.12.16-12.49.03:005][807]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2019.12.16-12.49.03:007][807]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.12.16-12.49.03:015][807]PIE: New page: PIE 세션: FirstPersonExampleMap (2019. 12. 17. 오전 6:49:03)
+[2019.12.16-12.49.03:016][807]LogPlayLevel: Creating play world package: /Game/FirstPersonCPP/Maps/UEDPIE_0_FirstPersonExampleMap
+[2019.12.16-12.49.03:071][807]LogPlayLevel: PIE: StaticDuplicateObject took: (0.054513s)
+[2019.12.16-12.49.03:072][807]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2019.12.16-12.49.03:072][807]LogPlayLevel: PIE: World Init took: (0.001341s)
+[2019.12.16-12.49.03:072][807]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap to /Game/FirstPersonCPP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.056270s)
+[2019.12.16-12.49.03:323][807]LogInit: XAudio2 using '헤드폰(QCY-T5_R Stereo)' : 2 channels at 44.1 kHz using 16 bits per sample (channel mask 0x3)
+[2019.12.16-12.49.03:370][807]LogInit: FAudioDevice initialized.
+[2019.12.16-12.49.03:421][807]LogLoad: Game class is 'GoldenFlagGameMode'
+[2019.12.16-12.49.03:434][807]LogWorld: Bringing World /Game/FirstPersonCPP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2019.12.16-21.49.03
+[2019.12.16-12.49.03:438][807]LogWorld: Bringing up level for play took: 0.005178
+[2019.12.16-12.49.03:819][807]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0011 seconds. Added 11 classes and 0 folders.
+[2019.12.16-12.49.03:822][807]PIE: /Game/FirstPersonCPP/Maps/UEDPIE_0_FirstPersonExampleMap 에 대한 에디터에서 플레이 시작 시간: 1.416
+[2019.12.16-12.49.03:822][807]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2019.12.16-12.49.09:076][106]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2019.12.16-12.49.09:128][106]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonCPP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2019.12.16-12.49.10:786][191]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.12.16-12.50.33:261][761]LogContentBrowser: Native class hierarchy updated for 'SkeletonEditor' in 0.0011 seconds. Added 1 classes and 2 folders.
+[2019.12.16-12.50.33:608][761]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.Actor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2019.12.16-12.50.33:619][761]LogContentBrowser: Native class hierarchy updated for 'PinnedCommandList' in 0.0010 seconds. Added 1 classes and 0 folders.
+[2019.12.16-12.50.33:723][761]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_11:PersistentLevel.Actor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2019.12.16-12.50.34:288][761]LogContentBrowser: Native class hierarchy updated for 'ClothingSystemEditorInterface' in 0.0016 seconds. Added 1 classes and 0 folders.
+[2019.12.16-12.50.34:320][761]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
