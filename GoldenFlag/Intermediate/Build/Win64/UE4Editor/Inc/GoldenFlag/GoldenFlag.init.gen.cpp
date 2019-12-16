@@ -19,7 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlag_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/GoldenFlag",
 				PKG_CompiledIn | 0x00000000,
-				0x79CEF760,
+				0xA0E3D360,
 				0xB7FE47EA,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
