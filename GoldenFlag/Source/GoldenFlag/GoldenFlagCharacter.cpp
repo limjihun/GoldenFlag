@@ -7,10 +7,8 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
-#include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
-#include "MotionControllerComponent.h"
-#include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "Math/UnrealMathUtility.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -26,16 +24,10 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 	BaseTurnRate = 45.f;
 	BaseLookUpRate = 45.f;
 
-	// Create a CameraComponent	
-	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
-	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
-	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
-	FirstPersonCameraComponent->bUsePawnControlRotation = true;
-
 	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
 	Mesh1P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh1P"));
-	Mesh1P->SetOnlyOwnerSee(true);
-	Mesh1P->SetupAttachment(FirstPersonCameraComponent);
+	//Mesh1P->SetOnlyOwnerSee(true);
+	Mesh1P->SetupAttachment(GetCapsuleComponent());
 	Mesh1P->bCastDynamicShadow = false;
 	Mesh1P->CastShadow = false;
 	Mesh1P->RelativeRotation = FRotator(1.9f, -19.19f, 5.2f);
@@ -43,10 +35,16 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 
 	// Create a mesh component that will be seen only by others (3rd person view)
 	Mesh3P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh3P"));
-	Mesh3P->SetOwnerNoSee(true);
-	Mesh3P->SetupAttachment(FirstPersonCameraComponent);
+	//Mesh3P->SetOwnerNoSee(true);
+	Mesh3P->SetupAttachment(GetCapsuleComponent());
 	Mesh3P->RelativeRotation = FRotator(0.0f, 270.0f, 0.0f);
 	Mesh3P->RelativeLocation = FVector(0.0f, 0.0f, -162.0f);
+
+	// Create a CameraComponent	
+	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
+	FirstPersonCameraComponent->SetupAttachment(Mesh3P);
+	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
+	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 
 	// Create a gun mesh component
 	FP_Gun = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FP_Gun"));
@@ -65,6 +63,7 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P, FP_Gun, and VR_Gun 
 	// are set in the derived blueprint asset named MyCharacter to avoid direct content references in C++.
+	
 }
 
 void AGoldenFlagCharacter::BeginPlay()
@@ -102,6 +101,35 @@ void AGoldenFlagCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+}
+
+float AGoldenFlagCharacter::GetSpeed() const
+{
+	return GetVelocity().Size();
+}
+
+float AGoldenFlagCharacter::GetDirectionInDegree() const
+{
+	// Look direction (Reference vector)
+	FVector ForwardDirection = GetActorForwardVector();
+	ForwardDirection.Normalize();
+	// Move direction
+	FVector MoveDirection = GetVelocity();
+	MoveDirection.Normalize();
+
+	// Get angle (0~180 degree)
+	float Angle = FMath::RadiansToDegrees(FMath::Acos(Dot3(ForwardDirection, MoveDirection)));
+	// Get sign (clockwise = positive)
+	FVector CrossProduct = FVector::CrossProduct(ForwardDirection, MoveDirection);
+	if (CrossProduct.Z > 0) // counter clockwise
+	{
+		Angle *= -1.0f;
+	}
+	return 0.0f;
+
+	// Atan2를 이용한 방법. -180~180도로 바로 구해짐 이해안감.....
+	//FVector v = MoveDirection - ForwardDirection;
+	//return FMath::RadiansToDegrees(FMath::Atan2(v.Y, v.X));
 }
 
 void AGoldenFlagCharacter::OnFire()

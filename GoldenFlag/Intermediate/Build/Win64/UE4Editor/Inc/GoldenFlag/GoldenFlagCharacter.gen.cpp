@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 	GOLDENFLAG_API UClass* Z_Construct_UClass_AGoldenFlagCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_GoldenFlag();
+	GOLDENFLAG_API UFunction* Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree();
+	GOLDENFLAG_API UFunction* Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -28,6 +30,60 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 // End Cross Module References
 	void AGoldenFlagCharacter::StaticRegisterNativesAGoldenFlagCharacter()
 	{
+		UClass* Class = AGoldenFlagCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GetDirectionInDegree", &AGoldenFlagCharacter::execGetDirectionInDegree },
+			{ "GetSpeed", &AGoldenFlagCharacter::execGetSpeed },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree()
+	{
+		struct GoldenFlagCharacter_eventGetDirectionInDegree_Parms
+		{
+			float ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Float, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, STRUCT_OFFSET(GoldenFlagCharacter_eventGetDirectionInDegree_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Character" },
+				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGoldenFlagCharacter, "GetDirectionInDegree", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, sizeof(GoldenFlagCharacter_eventGetDirectionInDegree_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed()
+	{
+		struct GoldenFlagCharacter_eventGetSpeed_Parms
+		{
+			float ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Float, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, STRUCT_OFFSET(GoldenFlagCharacter_eventGetSpeed_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Character" },
+				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGoldenFlagCharacter, "GetSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, sizeof(GoldenFlagCharacter_eventGetSpeed_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AGoldenFlagCharacter_NoRegister()
 	{
@@ -41,6 +97,10 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 			static UObject* (*const DependentSingletons[])() = {
 				(UObject* (*)())Z_Construct_UClass_ACharacter,
 				(UObject* (*)())Z_Construct_UPackage__Script_GoldenFlag,
+			};
+			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree, "GetDirectionInDegree" }, // 2180014705
+				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed, "GetSpeed" }, // 3474063564
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -163,7 +223,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 				&AGoldenFlagCharacter::StaticClass,
 				DependentSingletons, ARRAY_COUNT(DependentSingletons),
 				0x00800080u,
-				nullptr, 0,
+				FuncInfo, ARRAY_COUNT(FuncInfo),
 				PropPointers, ARRAY_COUNT(PropPointers),
 				"Game",
 				&StaticCppClassTypeInfo,
@@ -174,7 +234,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoldenFlagCharacter, 2110054118);
+	IMPLEMENT_CLASS(AGoldenFlagCharacter, 3074895619);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGoldenFlagCharacter(Z_Construct_UClass_AGoldenFlagCharacter, &AGoldenFlagCharacter::StaticClass, TEXT("/Script/GoldenFlag"), TEXT("AGoldenFlagCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGoldenFlagCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

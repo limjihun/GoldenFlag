@@ -65,7 +65,6 @@ public:
 	class UAnimMontage* FireAnimation;
 
 protected:
-	
 	/** Fires a projectile. */
 	void OnFire();
 
@@ -87,6 +86,12 @@ public:
 	FORCEINLINE class USkeletalMeshComponent* GetMesh3P() const { return Mesh3P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
+	UFUNCTION(BlueprintPure, Category = Character)
+	float GetSpeed() const;
+
+	UFUNCTION(BlueprintPure, Category = Character)
+	float GetDirectionInDegree() const;
 
 };
 

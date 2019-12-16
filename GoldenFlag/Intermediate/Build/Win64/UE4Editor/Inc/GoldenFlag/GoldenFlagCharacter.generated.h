@@ -13,8 +13,44 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GOLDENFLAG_GoldenFlagCharacter_generated_h
 
-#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS
-#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetDirectionInDegree) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetDirectionInDegree(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetSpeed) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetSpeed(); \
+		P_NATIVE_END; \
+	}
+
+
+#define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetDirectionInDegree) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetDirectionInDegree(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetSpeed) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetSpeed(); \
+		P_NATIVE_END; \
+	}
+
+
 #define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGoldenFlagCharacter(); \
