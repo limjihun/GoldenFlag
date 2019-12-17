@@ -142,6 +142,15 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent = { UE4CodeGen_Private::EPropertyClass::Object, "FirstPersonCameraComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(AGoldenFlagCharacter, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(NewProp_FirstPersonCameraComponent_MetaData, ARRAY_COUNT(NewProp_FirstPersonCameraComponent_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponRight_MetaData[] = {
+				{ "Category", "Mesh" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+				{ "ToolTip", "Weapon on right hand" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WeaponRight = { UE4CodeGen_Private::EPropertyClass::Object, "WeaponRight", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagCharacter, WeaponRight), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_WeaponRight_MetaData, ARRAY_COUNT(NewProp_WeaponRight_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh3P_MetaData[] = {
 				{ "Category", "Mesh" },
 				{ "EditInline", "true" },
@@ -155,6 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseLookUpRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseTurnRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FirstPersonCameraComponent,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WeaponRight,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Mesh3P,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -175,7 +185,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoldenFlagCharacter, 2393194732);
+	IMPLEMENT_CLASS(AGoldenFlagCharacter, 2111232460);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGoldenFlagCharacter(Z_Construct_UClass_AGoldenFlagCharacter, &AGoldenFlagCharacter::StaticClass, TEXT("/Script/GoldenFlag"), TEXT("AGoldenFlagCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGoldenFlagCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,0 +1,22 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-GoldenFlag-78.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlag.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagCharacter.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagGameMode.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagHUD.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagProjectile.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlag.init.gen.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagCharacter.gen.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagGameMode.gen.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagHUD.gen.cpp.obj"
+"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\GoldenFlagProjectile.gen.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\GoldenFlag\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\lim79\Desktop\CODE\UE4\GoldenFlag\GoldenFlag\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-GoldenFlag-78.lib"

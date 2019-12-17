@@ -9,6 +9,7 @@
 #include "GameFramework/InputSettings.h"
 #include "Kismet/GameplayStatics.h"
 #include "Math/UnrealMathUtility.h"
+#include "UObject/ConstructorHelpers.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -24,16 +25,30 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 	BaseTurnRate = 45.f;
 	BaseLookUpRate = 45.f;
 
-	// Create a mesh component that will be seen only by others (3rd person view)
+	// Create a character mesh component
 	Mesh3P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh3P"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> Mesh3P_SK(TEXT("SkeletalMesh'/Game/Character/Swat.Swat'"));
+	if (Mesh3P_SK.Succeeded())
+	{
+		Mesh3P->SetSkeletalMesh(Mesh3P_SK.Object);
+	}
 	Mesh3P->SetupAttachment(GetCapsuleComponent());
 	Mesh3P->RelativeRotation = FRotator(0.0f, 270.0f, 0.0f);
 	Mesh3P->RelativeLocation = FVector(0.0f, 0.0f, -90.0f);
 
+	// Create a weapon mesh component on right hand
+	WeaponRight = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WeaponRight"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> WeaponRight_SK(TEXT("SkeletalMesh'/Game/Weapons/AK47/AK.AK'"));
+	if (WeaponRight_SK.Succeeded())
+	{
+		WeaponRight->SetSkeletalMesh(WeaponRight_SK.Object);
+	}
+	WeaponRight->AttachToComponent(Mesh3P, FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("WeaponRight"));
+
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(Mesh3P);
-	FirstPersonCameraComponent->RelativeLocation = FVector(0.0f, 15.0f, 150.0f); // Position the camera
+	FirstPersonCameraComponent->RelativeLocation = FVector(0.0f, 28.0f, 150.0f); // Position the camera
 	FirstPersonCameraComponent->RelativeRotation = FRotator(0.0f, 90.0f, 0.0f);
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 }
