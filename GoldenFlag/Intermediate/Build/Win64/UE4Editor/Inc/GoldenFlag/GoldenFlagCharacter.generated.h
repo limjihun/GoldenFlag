@@ -97,6 +97,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGoldenFlagCharacter); \
 
 #define GoldenFlag_Source_GoldenFlag_GoldenFlagCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh3P() { return STRUCT_OFFSET(AGoldenFlagCharacter, Mesh3P); } \
+	FORCEINLINE static uint32 __PPO__WeaponRight() { return STRUCT_OFFSET(AGoldenFlagCharacter, WeaponRight); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AGoldenFlagCharacter, FirstPersonCameraComponent); }
 
 

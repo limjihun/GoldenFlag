@@ -50,6 +50,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "Category", "Character" },
 				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+				{ "ToolTip", "Get angle between forward vector and velocity vector" },
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGoldenFlagCharacter, "GetDirectionInDegree", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, sizeof(GoldenFlagCharacter_eventGetDirectionInDegree_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
@@ -74,6 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 				{ "Category", "Character" },
 				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+				{ "ToolTip", "Get speed of character" },
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AGoldenFlagCharacter, "GetSpeed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x54020401, sizeof(GoldenFlagCharacter_eventGetSpeed_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
@@ -95,8 +97,8 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 				(UObject* (*)())Z_Construct_UPackage__Script_GoldenFlag,
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
-				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree, "GetDirectionInDegree" }, // 2180014705
-				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed, "GetSpeed" }, // 3474063564
+				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetDirectionInDegree, "GetDirectionInDegree" }, // 1223689188
+				{ &Z_Construct_UFunction_AGoldenFlagCharacter_GetSpeed, "GetSpeed" }, // 766196034
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -140,6 +142,15 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent = { UE4CodeGen_Private::EPropertyClass::Object, "FirstPersonCameraComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(AGoldenFlagCharacter, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(NewProp_FirstPersonCameraComponent_MetaData, ARRAY_COUNT(NewProp_FirstPersonCameraComponent_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponRight_MetaData[] = {
+				{ "Category", "Mesh" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "GoldenFlagCharacter.h" },
+				{ "ToolTip", "Weapon on right hand" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WeaponRight = { UE4CodeGen_Private::EPropertyClass::Object, "WeaponRight", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagCharacter, WeaponRight), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_WeaponRight_MetaData, ARRAY_COUNT(NewProp_WeaponRight_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Mesh3P_MetaData[] = {
 				{ "Category", "Mesh" },
 				{ "EditInline", "true" },
@@ -153,6 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseLookUpRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BaseTurnRate,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FirstPersonCameraComponent,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WeaponRight,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Mesh3P,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -173,7 +185,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoldenFlagCharacter, 246626042);
+	IMPLEMENT_CLASS(AGoldenFlagCharacter, 2111232460);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGoldenFlagCharacter(Z_Construct_UClass_AGoldenFlagCharacter, &AGoldenFlagCharacter::StaticClass, TEXT("/Script/GoldenFlag"), TEXT("AGoldenFlagCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGoldenFlagCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
