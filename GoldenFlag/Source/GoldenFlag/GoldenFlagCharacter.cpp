@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Math/UnrealMathUtility.h"
 #include "UObject/ConstructorHelpers.h"
+#include "GameFramework/PlayerController.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -53,7 +54,7 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 
 	// Set projectile offset from camera
-	ProjectileOffset = FVector(200.0f, 0.0f, 0.0f);
+	ProjectileOffset = FVector(50.0f, 0.0f, 0.0f);
 }
 
 void AGoldenFlagCharacter::BeginPlay()
@@ -123,14 +124,19 @@ void AGoldenFlagCharacter::OnFire()
 	{
 		UWorld* const World = GetWorld();
 		if (World != NULL)
-		{
-			const FRotator SpawnRotation = GetControlRotation();
-			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-			const FVector SpawnLocation = GetActorLocation() + SpawnRotation.RotateVector(ProjectileOffset);
-
-			//Set Spawn Collision Handling Override
+		{	
+			// set spawn location and rotation as player view
+			FVector SpawnLocation;
+			FRotator SpawnRotation;
+			GetController()->GetPlayerViewPoint(SpawnLocation, SpawnRotation);
+			SpawnLocation += SpawnRotation.RotateVector(ProjectileOffset);
+			
+			// set Spawn Collision Handling Override
 			FActorSpawnParameters ActorSpawnParams;
-			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+			
+			UE_LOG(LogTemp, Log, TEXT("Projectile Location : %s"), *SpawnLocation.ToString());
+			UE_LOG(LogTemp, Log, TEXT("Projectile Rotation : %s"), *SpawnRotation.ToString());
 
 			// spawn the projectile at the muzzle
 			World->SpawnActor<AGoldenFlagProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);

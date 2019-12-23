@@ -24,8 +24,8 @@ AGoldenFlagProjectile::AGoldenFlagProjectile()
 	// Use a ProjectileMovementComponent to govern this projectile's movement
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
 	ProjectileMovement->UpdatedComponent = StaticMeshComponent;
-	ProjectileMovement->InitialSpeed = 3000.f;
-	ProjectileMovement->MaxSpeed = 3000.f;
+	ProjectileMovement->InitialSpeed = 5000.f;
+	ProjectileMovement->MaxSpeed = 5000.f;
 	ProjectileMovement->bRotationFollowsVelocity = true;
 
 	// Die after 3 seconds by default
