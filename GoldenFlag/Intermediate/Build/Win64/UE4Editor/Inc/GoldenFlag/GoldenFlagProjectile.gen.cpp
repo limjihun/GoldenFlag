@@ -23,7 +23,8 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 // End Cross Module References
 	void AGoldenFlagProjectile::StaticRegisterNativesAGoldenFlagProjectile()
 	{
@@ -117,17 +118,27 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement = { UE4CodeGen_Private::EPropertyClass::Object, "ProjectileMovement", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000a001d, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(NewProp_ProjectileMovement_MetaData, ARRAY_COUNT(NewProp_ProjectileMovement_MetaData)) };
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CollisionComp_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaticMeshComponent_MetaData[] = {
 				{ "Category", "Projectile" },
 				{ "EditInline", "true" },
 				{ "ModuleRelativePath", "GoldenFlagProjectile.h" },
-				{ "ToolTip", "Sphere collision component" },
+				{ "ToolTip", "Staticmesh component" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollisionComp = { UE4CodeGen_Private::EPropertyClass::Object, "CollisionComp", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, CollisionComp), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(NewProp_CollisionComp_MetaData, ARRAY_COUNT(NewProp_CollisionComp_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComponent = { UE4CodeGen_Private::EPropertyClass::Object, "StaticMeshComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, StaticMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(NewProp_StaticMeshComponent_MetaData, ARRAY_COUNT(NewProp_StaticMeshComponent_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CollisionComponent_MetaData[] = {
+				{ "Category", "Projectile" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "GoldenFlagProjectile.h" },
+				{ "ToolTip", "Capsule collision component" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollisionComponent = { UE4CodeGen_Private::EPropertyClass::Object, "CollisionComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, CollisionComponent), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(NewProp_CollisionComponent_MetaData, ARRAY_COUNT(NewProp_CollisionComponent_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ProjectileMovement,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CollisionComp,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_StaticMeshComponent,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CollisionComponent,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<AGoldenFlagProjectile>::IsAbstract,
@@ -147,7 +158,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoldenFlagProjectile, 534668078);
+	IMPLEMENT_CLASS(AGoldenFlagProjectile, 155791900);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGoldenFlagProjectile(Z_Construct_UClass_AGoldenFlagProjectile, &AGoldenFlagProjectile::StaticClass, TEXT("/Script/GoldenFlag"), TEXT("AGoldenFlagProjectile"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGoldenFlagProjectile);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

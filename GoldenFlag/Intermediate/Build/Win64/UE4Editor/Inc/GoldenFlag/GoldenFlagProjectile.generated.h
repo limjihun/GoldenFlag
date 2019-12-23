@@ -98,7 +98,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGoldenFlagProjectile); \
 
 
 #define GoldenFlag_Source_GoldenFlag_GoldenFlagProjectile_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__CollisionComp() { return STRUCT_OFFSET(AGoldenFlagProjectile, CollisionComp); } \
+	FORCEINLINE static uint32 __PPO__CollisionComponent() { return STRUCT_OFFSET(AGoldenFlagProjectile, CollisionComponent); } \
+	FORCEINLINE static uint32 __PPO__StaticMeshComponent() { return STRUCT_OFFSET(AGoldenFlagProjectile, StaticMeshComponent); } \
 	FORCEINLINE static uint32 __PPO__ProjectileMovement() { return STRUCT_OFFSET(AGoldenFlagProjectile, ProjectileMovement); }
 
 

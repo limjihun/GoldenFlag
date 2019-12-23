@@ -2,30 +2,31 @@
 
 #include "GoldenFlagProjectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-#include "Components/SphereComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/StaticMeshComponent.h"
 
 AGoldenFlagProjectile::AGoldenFlagProjectile() 
 {
-	// Use a sphere as a simple collision representation
-	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
-	CollisionComp->InitSphereRadius(5.0f);
-	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
-	CollisionComp->OnComponentHit.AddDynamic(this, &AGoldenFlagProjectile::OnHit);		// set up a notification for when this component hits something blocking
-
-	// Players can't walk on it
-	CollisionComp->SetWalkableSlopeOverride(FWalkableSlopeOverride(WalkableSlope_Unwalkable, 0.f));
-	CollisionComp->CanCharacterStepUpOn = ECB_No;
+	// Use a capsule staticmesh
+	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
+	StaticMeshComponent->SetupAttachment(CollisionComponent);
 
 	// Set as root component
-	RootComponent = CollisionComp;
+	RootComponent = StaticMeshComponent;
+
+	// Use a capsule as a simple collision representation
+	CollisionComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComponent"));
+	CollisionComponent->InitCapsuleSize(1.0f, 2.0f);
+	CollisionComponent->BodyInstance.SetCollisionProfileName("Projectile");
+	CollisionComponent->OnComponentHit.AddDynamic(this, &AGoldenFlagProjectile::OnHit);		// set up a notification for when this component hits something blocking
+	CollisionComponent->SetupAttachment(StaticMeshComponent);
 
 	// Use a ProjectileMovementComponent to govern this projectile's movement
-	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileComp"));
-	ProjectileMovement->UpdatedComponent = CollisionComp;
+	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+	ProjectileMovement->UpdatedComponent = StaticMeshComponent;
 	ProjectileMovement->InitialSpeed = 3000.f;
 	ProjectileMovement->MaxSpeed = 3000.f;
 	ProjectileMovement->bRotationFollowsVelocity = true;
-	ProjectileMovement->bShouldBounce = true;
 
 	// Die after 3 seconds by default
 	InitialLifeSpan = 3.0f;
