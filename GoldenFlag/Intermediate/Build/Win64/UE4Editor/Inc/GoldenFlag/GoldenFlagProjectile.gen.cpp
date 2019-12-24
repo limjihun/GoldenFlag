@@ -24,7 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 // End Cross Module References
 	void AGoldenFlagProjectile::StaticRegisterNativesAGoldenFlagProjectile()
 	{
@@ -108,6 +108,14 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 			};
 #endif
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ImpulseSize_MetaData[] = {
+				{ "Category", "Projectile" },
+				{ "ModuleRelativePath", "GoldenFlagProjectile.h" },
+				{ "ToolTip", "Impulse on hit point" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ImpulseSize = { UE4CodeGen_Private::EPropertyClass::Float, "ImpulseSize", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000005, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, ImpulseSize), METADATA_PARAMS(NewProp_ImpulseSize_MetaData, ARRAY_COUNT(NewProp_ImpulseSize_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[] = {
 				{ "AllowPrivateAccess", "true" },
 				{ "Category", "Movement" },
@@ -131,11 +139,12 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 				{ "Category", "Projectile" },
 				{ "EditInline", "true" },
 				{ "ModuleRelativePath", "GoldenFlagProjectile.h" },
-				{ "ToolTip", "Capsule collision component" },
+				{ "ToolTip", "Sphere collision component" },
 			};
 #endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollisionComponent = { UE4CodeGen_Private::EPropertyClass::Object, "CollisionComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, CollisionComponent), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(NewProp_CollisionComponent_MetaData, ARRAY_COUNT(NewProp_CollisionComponent_MetaData)) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollisionComponent = { UE4CodeGen_Private::EPropertyClass::Object, "CollisionComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00400000000b0009, 1, nullptr, STRUCT_OFFSET(AGoldenFlagProjectile, CollisionComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(NewProp_CollisionComponent_MetaData, ARRAY_COUNT(NewProp_CollisionComponent_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ImpulseSize,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ProjectileMovement,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_StaticMeshComponent,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CollisionComponent,
@@ -158,7 +167,7 @@ void EmptyLinkFunctionForGeneratedCodeGoldenFlagProjectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoldenFlagProjectile, 155791900);
+	IMPLEMENT_CLASS(AGoldenFlagProjectile, 2392306489);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGoldenFlagProjectile(Z_Construct_UClass_AGoldenFlagProjectile, &AGoldenFlagProjectile::StaticClass, TEXT("/Script/GoldenFlag"), TEXT("AGoldenFlagProjectile"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGoldenFlagProjectile);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

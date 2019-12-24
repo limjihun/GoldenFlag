@@ -11,9 +11,9 @@ class AGoldenFlagProjectile : public AActor
 {
 	GENERATED_BODY()
 
-	/** Capsule collision component */
+	/** Sphere collision component */
 	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
-	class UCapsuleComponent* CollisionComponent;
+	class USphereComponent* CollisionComponent;
 
 	/** Staticmesh component */
 	UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
@@ -26,12 +26,16 @@ class AGoldenFlagProjectile : public AActor
 public:
 	AGoldenFlagProjectile();
 
+	/* Impulse on hit point*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
+	float ImpulseSize;
+	
 	/** called when projectile hits something */
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 	/** Returns CollisionComp subobject **/
-	FORCEINLINE class UCapsuleComponent* GetCollisionComponent() const { return CollisionComponent; }
+	FORCEINLINE class USphereComponent* GetCollisionComponent() const { return CollisionComponent; }
 	/** Returns ProjectileMovement subobject **/
 	FORCEINLINE class UProjectileMovementComponent* GetProjectileMovement() const { return ProjectileMovement; }
 };
