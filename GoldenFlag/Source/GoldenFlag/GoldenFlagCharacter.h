@@ -33,28 +33,28 @@ protected:
 
 public:
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 	float BaseTurnRate;
 
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 	float BaseLookUpRate;
 
 	/** Projectile class to spawn */
-	UPROPERTY(EditDefaultsOnly, Category=Projectile)
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class AGoldenFlagProjectile> ProjectileClass;
 
-	///** Sound to play each time we fire */
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
-	//class USoundBase* FireSound;
+	/** Projectile offset from camera */
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	FVector ProjectileOffset;
 
-	///** AnimMontage to play each time we fire */
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-	//class UAnimMontage* FireAnimation;
+	/** Sound to play each time we fire */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
+	class USoundBase* FireSound;
 
 protected:
 	/** Fires a projectile. */
-	//void OnFire();
+	void OnFire();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

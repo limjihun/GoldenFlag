@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Math/UnrealMathUtility.h"
 #include "UObject/ConstructorHelpers.h"
+#include "GameFramework/PlayerController.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -51,6 +52,9 @@ AGoldenFlagCharacter::AGoldenFlagCharacter()
 	FirstPersonCameraComponent->RelativeLocation = FVector(0.0f, 28.0f, 150.0f); // Position the camera
 	FirstPersonCameraComponent->RelativeRotation = FRotator(0.0f, 90.0f, 0.0f);
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
+
+	// Set projectile offset from camera
+	ProjectileOffset = FVector(50.0f, 0.0f, 0.0f);
 }
 
 void AGoldenFlagCharacter::BeginPlay()
@@ -72,7 +76,7 @@ void AGoldenFlagCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	// Bind fire event
-	//PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AGoldenFlagCharacter::OnFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AGoldenFlagCharacter::OnFire);
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AGoldenFlagCharacter::MoveForward);
@@ -113,45 +117,35 @@ float AGoldenFlagCharacter::GetDirectionInDegree() const
 	//return FMath::RadiansToDegrees(FMath::Atan2(v.Y, v.X));
 }
 
-//void AGoldenFlagCharacter::OnFire()
-//{
-//	// try and fire a projectile
-//	if (ProjectileClass != NULL)
-//	{
-//		UWorld* const World = GetWorld();
-//		if (World != NULL)
-//		{
-//			const FRotator SpawnRotation = GetControlRotation();
-//			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-//			const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
-//
-//			//Set Spawn Collision Handling Override
-//			FActorSpawnParameters ActorSpawnParams;
-//			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
-//
-//			// spawn the projectile at the muzzle
-//			World->SpawnActor<AGoldenFlagProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
-//			
-//		}
-//	}
-//
-//	// try and play the sound if specified
-//	if (FireSound != NULL)
-//	{
-//		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-//	}
-//
-//	// try and play a firing animation if specified
-//	if (FireAnimation != NULL)
-//	{
-//		// Get the animation object for the arms mesh
-//		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
-//		if (AnimInstance != NULL)
-//		{
-//			AnimInstance->Montage_Play(FireAnimation, 1.f);
-//		}
-//	}
-//}
+void AGoldenFlagCharacter::OnFire()
+{
+	// try and fire a projectile
+	if (ProjectileClass != NULL)
+	{
+		UWorld* const World = GetWorld();
+		if (World != NULL)
+		{	
+			// set spawn location and rotation as player view
+			FVector SpawnLocation;
+			FRotator SpawnRotation;
+			GetController()->GetPlayerViewPoint(SpawnLocation, SpawnRotation);
+			SpawnLocation += SpawnRotation.RotateVector(ProjectileOffset);
+			
+			// set Spawn Collision Handling Override
+			FActorSpawnParameters ActorSpawnParams;
+			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+			// spawn the projectile at the muzzle
+			World->SpawnActor<AGoldenFlagProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+		}
+	}
+
+	// try and play the sound if specified
+	if (FireSound != NULL)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+	}
+}
 
 void AGoldenFlagCharacter::MoveForward(float Value)
 {
